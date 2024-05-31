@@ -54,7 +54,7 @@ public:
     }
 
     void display(){
-        int Front_position = FRONT;
+        int FRONT_position = FRONT;
         int REAR_position = REAR;
 
         // Cek apakah antrian kosong
@@ -65,29 +65,33 @@ public:
 
         cout << "\nElement in the queue are. . .\n";
 
-        //Jika Front_position <= REAR_position, iterasi dari FRONT hingga REAR
-        if (Front_position <= REAR_position){
-            while (Front_position <= REAR_position){
-                cout << queue_array[Front_position] << "   ";
-                Front_position++;
+        //Jika FRONT_position <= REAR_position, iterasi dari FRONT hingga REAR
+        if (FRONT_position <= REAR_position){
+            while (FRONT_position <= REAR_position){
+                cout << queue_array[FRONT_position] << "   ";
+                FRONT_position++;
             }
             cout << endl;
         }
         else {
             // Jika FRONT_position > REAR_position, iterasi dari front hingga akhir array
-            while (Front_position <= max - 1){
-                cout << queue_array[Front_position]<< "   ";
-                Front_position++;
+            while (FRONT_position <= max - 1){
+                cout << queue_array[FRONT_position]<< "   ";
+                FRONT_position++;
             }
 
-            Front_position = 0;
+            FRONT_position = 0;
 
             //iterasi dari awal array hingga REAR
-            while (Front_position <= REAR_position) {
-                cout << queue_array[Front_position] << "   ";
-                Front_position++;
+            while (FRONT_position <= REAR_position) {
+                cout << queue_array[FRONT_position] << "   ";
+                FRONT_position++;
             }
             cout << endl
         }
     }
 };
+
+int main() {
+    
+}
